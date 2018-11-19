@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+    <!--
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal"
+
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="倾向:"
+                android:textColor="#000000"/>
+
+            <TextView
+                android:id="@+id/lean_to"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:textColor="#595959"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="俯仰:"
+                android:textColor="#000000"/>
+
+            <TextView
+                android:id="@+id/pitching"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:textColor="#595959"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal"
+
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="倾角:"
+                android:textColor="#000000"/>
+
+            <TextView
+                android:id="@+id/dip_angle"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:textColor="#595959"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="横滚:"
+                android:textColor="#000000"/>
+
+            <TextView
+                android:id="@+id/roll"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:textColor="#595959"/>
+        </LinearLayout>
+    -->
+
+    <RelativeLayout
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_gravity="center"
+        android:padding="30dp">
+
+        <ImageView
+            android:id="@+id/compass"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:layout_gravity="center"
+            android:padding="10dp"
+            android:src="@mipmap/compass"/>
+
+        <FrameLayout
+            android:id="@+id/fl_frame"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:background="@mipmap/imagebutton">
+
+            <!--app:bubbleRuleColor="#ffffff"-->
+            <dac.zjms.com.compass.LevelView
+                android:id="@+id/gv_hv"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                app:bubbleColor="#7b7a7a"
+                app:bubbleRadius="5dp"
+                app:bubbleRuleRadius="27dp"
+                app:bubbleRuleWidth="1dp"
+                app:horizontalColor="#3a86f7"
+                app:horizontalColor_two="#ff3636"
+                app:limitCircleWidth="6dp"
+                app:limitColor="#7b7a7a"
+                app:limitRadius="119dp"/>
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@mipmap/level"/>
+        </FrameLayout>
+
+        <TextView
+
+            android:id="@+id/angle"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/fl_frame"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"/>
+    </RelativeLayout>
+
+</LinearLayout>
